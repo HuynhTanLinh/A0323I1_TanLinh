@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        fieldset{
+            width: 100px;
+            background-color: pink;
+        }
+        legend{
+            color: blue;
+            font-size: 20px;
+        }
+        button{
+            color: white;
+            background-color: blue;
+            height: 50px;
+        }
+        tr {
+            height: 50px;
+        }
+        input, select {
+            height: 25px;
+        }
+        body {
+            margin-top: 10%;
+
+        }
+    </style>
+
+</head>
+<body>
+<center>
+
+
+    <form>
+    <fieldset >
+        <legend>Ứng dụng chuyển đổi tiền tệ</legend>
+    <table  width="50%" >
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="Amount"></td>
+            <td>
+                <select id="Fromcurrency">
+                    <option>--Chọn loại tiền--</option>
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="Tocurrency">
+                    <option>--Chọn loại tiền--</option>
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <button type='button' onclick="convert()">Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="Result" colspan="4" style="color: blue"> </td>
+
+
+        </tr>
+    </table>
+    </fieldset>
+    </form>
+</center>
+</body>
+<script>
+    function convert() {
+    let a = document.getElementById("Amount").value;
+    let fc = document.getElementById("Fromcurrency").value;
+    let tc = document.getElementById("Tocurrency").value;
+    let Result;
+    if (fc=="VND"&&tc=="USD"){
+    Result=a/23000;
+    alert("số tiền đổi thành : "+Result + "$");
+    document.getElementById("Result").innerText = "Result: "+Result+ "$";
+    }
+    else if (fc=="USD"&&tc=="VND"){
+        Result=a*23000;
+        alert("số tiền đổi thành: " + Result +"VND");
+        document.getElementById("Result").innerText = "Result: "+Result+"VND";
+    }
+    else if (fc=="VND"&&tc=="VND"){
+        Result=a;
+        alert("Số tiền đổi thành: "+Result+"VND");
+        document.getElementById("Result").innerText="Result: "+Result+"VND";
+    }
+    else if(fc=="USD"&&tc=="USD"){
+        Result=a;
+        alert("Số tiền đổi thành: "+ Result + "$");
+        document.getElementById("Result").innerText="Result: "+Result+"$";
+    }
+    else {
+        alert("Bạn chưa chọn loại tiền");
+    }
+    }
+</script>
+</html>
