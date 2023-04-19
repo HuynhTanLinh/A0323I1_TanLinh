@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        td{
+            width: 200px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+<input id="numberfirst" type="number">
+<input id="numbersecond" type="number">
+<br>
+<br>
+<button type="button" onclick="addition()">Addition(+)</button>
+<button type="button" onclick="subtraction()">Subtration(-)</button>
+<button type="button" onclick="multiplication()">Multiplication(X)</button>
+<button type="button" onclick="division()">Division(/)</button><br>
+<p id="resultion"></p>
+</body>
+<script>
+
+
+    function addition() {
+        let num1 = +document.getElementById("numberfirst").value;
+        let num2 = +document.getElementById("numbersecond").value;
+        let Result;
+    Result = num1+num2;
+    alert("addition: " + Result);
+    document.getElementById("resultion").innerText="Result Addition: "+Result ;
+    }
+    function subtraction() {
+        let num1 = +document.getElementById("numberfirst").value;
+        let num2 = +document.getElementById("numbersecond").value;
+        let Result;
+        Result = num1-num2;
+        alert("subtration: " + Result);
+        document.getElementById("resultion").innerText="Result Subtration: "+Result ;
+    }
+    function multiplication() {
+        let num1 = +document.getElementById("numberfirst").value;
+        let num2 = +document.getElementById("numbersecond").value;
+        let Result;
+        Result = num1*num2;
+        alert("Multiplication " + Result);
+        document.getElementById("resultion").innerText="Result Multiplication: "+Result ;
+    }
+    function division() {
+        let num1 = +document.getElementById("numberfirst").value;
+        let num2 = +document.getElementById("numbersecond").value;
+        let Result;
+        Result = num1/num2;
+        alert("Division: " + Result);
+        document.getElementById("resultion").innerText="Result Division: "+Result ;
+    }
+
+</script>
+</html>
