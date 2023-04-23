@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DT hình chữ nhật</title>
+</head>
+<style>
+    input{
+        width: 30px;
+    }
+
+</style>
+<body>
+<h2>Tính diện tích hình chữ nhật</h2>
+Nhập chiều dài: <input type="text" id="Chieudai"><br><br>
+Nhập chiều rộng: <input type="text" id="Chieurong">
+<br><br>
+<button type="button" onclick="Dientich()">Diện tích</button>
+<p id="DT"></p>
+</body>
+<script>
+    function Dientich() {
+        let a =document.getElementById("Chieudai").value;
+        let b =document.getElementById("Chieurong").value;
+        let S= a*b;
+        if (isNaN(a,b)){
+            document.getElementById("DT").innerText="error";
+        }
+        else {
+            document.getElementById("DT").innerText= "Diện tích: "+S;
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+    button{
+        height: 40px;
+        width: 40px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    input{
+        width: 190px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    fieldset{
+        width: 220px;
+    }
+    tr{
+        height: 25px;
+            }
+    td{
+        text-align: right;
+    }
+
+</style>
+<body>
+
+
+<table border="1">
+    <tr>
+        <td id="kq" width="200px"></td>
+
+    </tr>
+</table>
+    <button onclick="one()" type="button" id="1">1</button>
+    <button onclick="two()" type="button" id="2">2</button>
+    <button onclick="three()" type="button" id="3">3</button>
+    <button onclick="sum()" type="button" id="+">+</button> <br>
+    <button onclick="four()" type="button" id="4">4</button>
+    <button onclick="five()" type="button" id="5">5</button>
+    <button onclick="six()" type="button" id="6">6</button>
+    <button onclick="Sub()" type="button" id="-">-</button> <br>
+    <button onclick="seven()" type="button" id="7">7</button>
+    <button onclick="eight()" type="button" id="8">8</button>
+    <button onclick="nine()" type="button" id="9">9</button>
+    <button onclick="mul()" type="button" id="x">x</button> <br>
+    <button onclick="clrscr()" type="button" id="C">C</button>
+    <button onclick="zero()" type="button" id="0">0</button>
+    <button onclick="kq()" type="button" id="=">=</button>
+    <button onclick="div()" type="button" id="/">/</button>
+        <p id="lol"></p>
+
+
+
+
+</body>
+<script>
+    let bieuthuc="";
+    document.getElementById("kq").innerText=bieuthuc;
+    function zero() {
+        let text=0;
+        bieuthuc = bieuthuc.concat(text.toString());
+        document.getElementById("kq").innerText=bieuthuc;
+
+    }
+    function one() {
+        let text=1;
+        bieuthuc = bieuthuc.concat(text.toString());
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function two() {
+        let text=2;
+        bieuthuc=bieuthuc.concat(text.toString());
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function three() {
+        let text=3;
+        bieuthuc=bieuthuc.concat(text.toString());
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function four() {
+        bieuthuc=bieuthuc.concat("4");
+        document.getElementById("kq").innerText=bieuthuc;
+
+    }
+    function five() {
+        bieuthuc=bieuthuc.concat("5");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function six() {
+        bieuthuc=bieuthuc.concat("6");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function seven() {
+        bieuthuc=bieuthuc.concat("7");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function eight() {
+        bieuthuc=bieuthuc.concat("8");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function nine() {
+        bieuthuc=bieuthuc.concat("9");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function sum() {
+        bieuthuc=bieuthuc.concat("+");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function Sub() {
+        bieuthuc=bieuthuc.concat("-");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function mul() {
+        bieuthuc=bieuthuc.concat("*");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function div() {
+        bieuthuc=bieuthuc.concat("/");
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function clrscr() {
+        bieuthuc="";
+        document.getElementById("kq").innerText=bieuthuc;
+    }
+    function kq() {
+        let text = eval(bieuthuc).toString();
+        if (text == "Infinity"||text == "-Infinity") {
+            text = "Óc chó rứa!";
+            document.getElementById("kq").innerText=text;
+        }else {
+            document.getElementById("kq").innerText=eval(bieuthuc);
+        }
+
+    }
+</script>
+</html>

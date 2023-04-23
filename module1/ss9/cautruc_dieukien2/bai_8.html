@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra tuổi người</h2>
+Nhập số tuổi: <input type="number" id="old"><br><br>
+<button type="button" onclick="kt()">Kiểm tra</button> <br><br>
+<p id="kiemtra"></p>
+
+</body>
+<script>
+function kt() {
+    let a=+document.getElementById("old").value;
+    if (Number.isInteger(a)) {
+        if (0<a && a<120) {
+            document.getElementById("kiemtra").innerText = "Là tuổi cùa người";
+
+        } else {
+            document.getElementById("kiemtra").innerText = " không phải tuổi của người";
+        }
+    }
+    else {
+        document.getElementById("kiemtra").innerText="error";
+    }
+
+}
+</script>
+</html>

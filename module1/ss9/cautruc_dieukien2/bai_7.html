@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PT bậc 2</title>
+    <style>
+        fieldset{
+            width: 50%;
+            background-color: pink;
+        }
+        button{
+            background-color: blue;
+            color: white;
+        }
+        p{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+        <center>
+            <h2>Nhập các tham số của phương trình ax<sup>2</sup>+bx+c=0</h2>
+            a= <input type="number" id="num1"> <br><br>
+            b= <input type="number" id="num2"> <br><br>
+            c= <input type="number" id="num3"> <br><br>
+            <button type="button" onclick="KQua()">Kết quả</button>
+            <p id="Ket_qua"></p>
+        </center>
+    </fieldset>
+
+</form>
+
+
+
+
+</body>
+<script>
+    function KQua() {
+        let a=document.getElementById("num1").value;
+        let b=document.getElementById("num2").value;
+        let c=document.getElementById("num3").value;
+        let delta=(b*b)-(4*a*c);
+        if (delta<0){
+            document.getElementById("Ket_qua").innerText="Phương trình vô nghiệm";
+        }
+        else if (delta==0){
+            let x=-b/(2*a);
+            document.getElementById("Ket_qua").innerText="Phương trình có nghiệm kép x1=x2= "+x;
+        }
+        else {
+            let x1= (-b+ Math.sqrt(delta))/(2*a);
+            let x2= (-b- Math.sqrt(delta))/(2*a);
+            document.getElementById("Ket_qua").innerText="Phương trình có 2 nghiệm x1= "+x1+" x2 = "+x2;
+        }
+
+    }
+</script>
+</html>

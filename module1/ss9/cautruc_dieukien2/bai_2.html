@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Chuyển đổi từ mét sang feet</h2>
+Nhập mét: <input type="number" id="input_met"><br>
+<br>
+<button type="button" onclick="chuyen_feet()">Chuyển feet</button>
+<p id="so_feet"></p>
+</body>
+<script>
+    function chuyen_feet() {
+        let met = document.getElementById("input_met").value;
+        let feet = met*3.2808 ;
+        if (isNaN(met)){
+            document.getElementById("so_feet").innerText= "error";
+        }
+        else {
+            document.getElementById("so_feet").innerText= "="+feet+" feet";
+        }
+
+    }
+</script>
+</html>

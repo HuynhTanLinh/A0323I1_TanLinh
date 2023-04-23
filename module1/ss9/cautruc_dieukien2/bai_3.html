@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DT hình vuông</title>
+</head>
+<body>
+<h2 style="color: red">Tính diện tích hình vuông: </h2>
+Nhập cạnh hình vuông: <input type="number" id="canh"> m <br><br>
+<button type="button" onclick="dien_tich()">Diện tích</button>
+<p id="DT"></p>
+
+</body>
+<script>
+    function dien_tich(){
+        let a= document.getElementById("canh").value;
+        let S= a*a;
+        if (isNaN(a)){
+            document.getElementById("DT").innerText="error";
+
+        }else {
+            document.getElementById("DT").innerText="Diện tích: "+S+ " mét vuông";
+        }
+    }
+
+</script>
+</html>
