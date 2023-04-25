@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lãi ngân hàng</title>
+    <style>
+        fieldset{
+            width: 500px;background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<h2>Tính tiền lãi </h2>
+<p> Thời hạn 6 tháng: 6%</p>
+<p>Thời hạn 12 tháng: 12%</p>
+<p>Thời hạn 24 tháng: 18%</p>
+<fieldset >
+<center>
+Nhập số tiền muốn vay: <input type="text" id="tien_vay">
+<select id="thoihanvay">
+    <option>--Chọn thời hạn--</option>
+    <option>6 tháng</option>
+    <option>12 tháng</option>
+    <option>24 tháng</option>
+</select> <br>
+<br><br>
+<button type="button" onclick="lai()">tính lãi</button>
+<p id="tramoithang"></p>
+<p id="tongtra"></p>
+
+</center>
+</fieldset>
+</body>
+<script>
+    function lai() {
+        let a=+document.getElementById("tien_vay").value;
+        let c=document.getElementById("thoihanvay").value;
+        let ls;
+        let tramoithang;
+        let tongtra;
+        if(c=="6 tháng"){
+            ls=a*(6/100);
+            tongtra= ls+a;
+            tramoithang=tongtra/6;
+            document.getElementById("tramoithang").innerText="Trả mỗi tháng: "+tramoithang+" đồng";
+            document.getElementById("tongtra").innerText="Tổng phải trả: "+tongtra+" đồng";
+
+
+        }
+        else if (c=="12 tháng"){
+            ls=a*(12/100);
+            tongtra= ls+a;
+            tramoithang=tongtra/12;
+            document.getElementById("tramoithang").innerText="Trả mỗi tháng: "+tramoithang+" đồng";
+            document.getElementById("tongtra").innerText="Tổng phải trả: "+tongtra+" đồng";
+        }
+        else if (c=="24 tháng") {
+            ls = a * (18 / 100);
+            tongtra = ls + a;
+            tramoithang = tongtra / 12;
+            document.getElementById("tramoithang").innerText = "Trả mỗi tháng: " + tramoithang + " đồng";
+            document.getElementById("tongtra").innerText = "Tổng phải trả: " + tongtra + " đồng";
+        }
+        else {
+            document.getElementById("tramoithang").innerText="Bạn chưa nhập thời hạn vay !";
+            document.getElementById("tongtra").innerText="";
+        }
+
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế TNCN</title>
+</head>
+<body>
+Nhập thu nhập mỗi tháng: <input type="text" id="thunhap"> <br> <br>
+<button type="button" onclick="thue()">Thuế</button>
+<p id="tien_thue"></p>
+
+</body>
+<script>
+    function thue() {
+        let a = +document.getElementById("thunhap").value;
+        let b;
+        if (a <= 5000000) {
+            b = a *(5/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        } else if (a <= 10000000) {
+            b = a * (10/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        } else if (a <= 18000000) {
+            b = a * (15/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        } else if (a <= 32000000) {
+            b = a * (20/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        } else if (a <= 52000000) {
+            b = a * (25/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        }else if (a <= 80000000) {
+            b = a * (30 / 100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        }
+        else {
+            b = a * (35/100);
+            document.getElementById("tien_thue").innerText = "Thuế: " + b + " đồng";
+        }
+    }
+</script>
+</html>

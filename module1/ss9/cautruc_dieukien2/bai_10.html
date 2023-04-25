@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh <br>
+    Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh <br>
+    Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh <br>
+    Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh <br>
+    Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh <br>
+    Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh
+</p>
+ Nhập số kWh: <input type="text" id="kwh"> <br> <br>
+<button type="button" onclick="sotien()">Giá tiền</button>
+<p id="Gia"></p>
+
+
+</body>
+<script>
+    function sotien() {
+        let a = +document.getElementById("kwh").value;
+        let b;
+        if (a <= 50) {
+            b = a * 1687;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        } else if (a <= 100) {
+            b = a * 1734;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        } else if (a <= 200) {
+            b = a * 2014;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        } else if (a <= 300) {
+            b = a * 2536;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        } else if (a <= 400) {
+            b = a * 2834;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        } else {
+            b = a * 2927;
+            document.getElementById("Gia").innerText = "Tiền: " + b + " đồng";
+        }
+    }
+</script>
+</html>
