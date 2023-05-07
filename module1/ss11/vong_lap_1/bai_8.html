@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT8</title>
+</head>
+<style>
+    button{
+        height: 70px;
+        background-color: blue;
+        color: white;
+    }
+</style>
+<body>
+<center>
+    <button type="button" onclick="startgame()">Chơi/Chơi lại</button>
+</center>
+
+
+</body>
+<script>
+    function startgame() {
+        let a=+prompt("Nhập khoảng muốn đoán (số bắt đầu từ ): ");
+        let b=+prompt("Đến: ");
+        alert("bạn có 3 lượt chơi");
+        let random=Math.floor(Math.random()*(b-a+1)+a);
+        let i=1;
+        while (i<=3){
+            let c=+prompt("Nhập số bạn đoán: ");
+            if (c<random){
+                alert("Nhập số lớn hơn: ");
+            }else if (c>random){
+                alert("Nhập số nhỏ hơn: ");
+            }else {
+                alert("chúc mừng bạn đã đoán đúng số: "+random);
+                break;
+            }
+            i++;
+        }
+    }
+
+
+</script>
+</html>
