@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soluongSNT = 0;
+    let c = 1;
+    let n = 2;
+    while (soluongSNT <= 20) {
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                c = 0;
+                break;
+            }
+            c = 1;
+        }
+        if (c == 1) {
+            document.write(n + ",");
+            soluongSNT++;
+        }
+        n++;
+    }
+
+</script>
+</body>
+</html>
