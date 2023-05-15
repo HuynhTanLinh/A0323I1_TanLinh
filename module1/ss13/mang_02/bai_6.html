@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi: ");
+    let b = a.split("");
+    document.write("Chuỗi ban đầu: " + a + "<br>");
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] === "-") {
+            b[i] = "_";
+        }
+    }
+    document.write(b.join(""));
+</script>
+
+</body>
+</html>

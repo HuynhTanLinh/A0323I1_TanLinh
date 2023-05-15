@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi: ");
+    let num = "0123456789";
+    let dem = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (num.includes(a[i])) {
+            dem++;
+
+        }
+    }
+    document.write("Chuỗi có: " + dem + " số");
+</script>
+
+</body>
+</html>

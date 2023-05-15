@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tra cứu từ điển</h2>
+<input type="text" id="text">
+<button type="button" onclick="tracuu()">Tra cứu</button>
+<br>
+<p id = "result"></p>
+</body>
+<script>
+    let str = [
+        {nhap: "Hello", xuat: "Xin chào"},
+        {nhap: "Bye", xuat: "Tạm biệt"},
+        {nhap: "House", xuat: "Ngôi nhà"},
+        {nhap: "Pig", xuat: "Con heo"}
+
+    ];
+    function tracuu() {
+            let a = document.getElementById("text").value;
+        for (let i = 0; i <str.length ; i++) {
+            if (str[i].nhap == a) {
+                document.getElementById("result").innerHTML = str[i].xuat;
+                return;
+            }
+            else {
+                document.getElementById("result").innerHTML = "Không tìm thấy!!"
+            }
+        }
+    }
+</script>
+</html>

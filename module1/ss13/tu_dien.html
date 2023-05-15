@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tra cứu từ điển</h2>
+<input type="text" id="text">
+<button type="button" onclick="tracuu()">Tra cứu</button>
+<br>
+<p id = "result"></p>
+</body>
+<script>
+    let mE = ["Hello", "Bye", "Pig", "House"];
+    let mV = ["Xin chào", "Tạm biệt", "Con heo", "Ngôi nhà"];
+    let KQ = [];
+    function tracuu() {
+        let a = document.getElementById("text").value;
+        for (let i = 0; i <mE.length ; i++) {
+            if (mE.indexOf(a) !== -1){
+                document.getElementById("result").innerHTML = mV[mE.indexOf(a)];
+            }
+            else {
+                document.getElementById("result").innerHTML = "Không tìm thấy!!"
+            }
+        }
+    }
+</script>
+</html>

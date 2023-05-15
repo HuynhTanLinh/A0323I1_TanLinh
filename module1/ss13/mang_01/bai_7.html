@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1,2,3,4,5,6,7,8,9,10];
+    let V = +prompt("Nhập V: ");
+    let index = array.indexOf(V);
+    for (let i = 0; i <array.length ; i++) {
+        if (index !== -1) {
+            let x = array.splice(index,1);
+            array.push(0);
+            document.write(array);
+            break;
+        }
+        else {
+            alert( V + " không có trong mảng!!")
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>

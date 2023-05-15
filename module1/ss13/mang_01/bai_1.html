@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="soluong"></p>
+<p id="hienthi"></p>
+<script>
+    let num = [1, 5, 10, 15, 20, 8, 25, 50];
+    let count =0 ;
+    for (let i = 0; i <num.length ; i++) {
+        if (num[i]>=10){
+            document.write(num[i] + "<br>");
+            count++;
+        }
+        document.getElementById("soluong").innerHTML = "Có" + count + " số";
+    }
+</script>
+
+</body>
+</html>
